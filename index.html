@@ -14,25 +14,25 @@
 
         <div class="button-container">
             <div class="color-options">
-                <button class="color button">Choose color</button>
+                <button class="button color-picker-btn">Choose color</button>
+                <input type="color" id="color-picker" class="color-picker"
+                style="display: none;">
+                <div class="active-color"></div>
             </div>
             <div class="rainbow">
-                <button class="rainbow button">Rainbow</button>
+                <button class="button rainbow">Rainbow</button>
             </div>
-            <div class="shade">
-                <button class="shade button">Shade Darker</button>
-            </div>
-            <div class="lighten">
-                <button class="lighten button">Shade Lighter</button>
+            <div class="random">
+                <button class="button random">Random Color</button>
             </div>
             <div class="eraser">
-                <button class="eraser button">Eraser</button>
+                <button class="button eraser">Eraser</button>
             </div>
 
             <div class="slider-container">Number of boxes
                 <input type="range" id="slider" min="8" max="64" step="8">
                 
-                <p class="quantity"><output id="value"></output></p>
+                <div class="quantity"><output id="value"></output></div>
             </div>
 
             <div class="reset">
@@ -41,7 +41,9 @@
         </div>
 
         <div class="box-container">
-            <div class="game-board"></div>
+            <div class="game-board">
+
+            </div>
         </div>
 
     </div>

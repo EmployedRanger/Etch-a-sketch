@@ -68,15 +68,42 @@ body {
 }
 
 .reset {
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 h1 {
     display: flex;
     justify-content: center;
-    padding: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     font-size: 55px;
+}
+
+.color-options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.color-picker {
+    position: absolute;
+    top: calc(100% + 200px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.color-picker-btn {
+    margin: 10px;
+}
+
+.active-color {
+    width: 100px;
+    height: 20px;
+    padding: 10px;
+    border: 2px solid whitesmoke;
+    pointer-events: none;
 }
 
 .main-container {
@@ -85,21 +112,23 @@ h1 {
 }
 
 .box-container {
-    max-width: 700px;
-    max-height: 700px;
+    max-width: 760px;
+    max-height: 760px;
     border: 4px solid whitesmoke;
     margin-left: 100px;
-
+    box-sizing: border-box;
 }
 
 .game-board {
-    width: 700px;
-    height: 700px;
+    width: 750px;
+    height: 750px;
+    display: grid;
+    grid-template-columns: repeat(40, 1fr);
+    grid-template-rows: repeat(40, 1fr);
 }
 
 .slider-container {
     appearance: none;
-
     border: 2px solid #1A1A1A;
     border-radius: 15px;
     box-sizing: border-box;
@@ -132,7 +161,6 @@ h1 {
     transition: opacity .2s;
     -webkit-transition: .2s;
     outline: none;
-
 }
   
 .slider ::-webkit-slider-thumb {
@@ -153,4 +181,9 @@ h1 {
 p {
     margin-bottom: 0;
     padding: 0;
+}
+
+div.rainbow {
+    padding-top: 30px;
+    
 }
